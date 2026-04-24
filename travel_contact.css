@@ -1,3 +1,28 @@
+body{
+        text-align: center;
+    }
+    /* Some basic styling for demonstration purposes */
+    #contactForm {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    #contactForm input,
+    #contactForm textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+    #contactForm button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #contactForm button:hover {
+      background-color: #0056b3;
+    }
+
 *{
     margin: 0;
     padding: 0;
@@ -40,34 +65,5 @@ nav {
   justify-content: center;
   padding: 60px;
   gap: 20px;
-}
-
-.hero h1,
-.hero > p,
-.team-title,
-.member {
-  background: rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 8px;
-}
-
-.team-line {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  color: white;
-  flex-wrap: wrap;
-}
-
-.team-members {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.member p {
-  margin: 5px 0 0;
-  font-size: 14px;
 }
 
