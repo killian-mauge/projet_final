@@ -11,10 +11,10 @@ function searchCondition() {
 
   fetch('travel_recommendation_api.json')
     .then(response => response.json())
-    .then(countries => {
+    .then(data => {
       let cityFound = null;
 
-      countries.forEach(country => {
+      data.countries.forEach(country => {
         const found = country.cities.find(city =>
           city.name.split(",")[0].toLowerCase().trim() === input
         );

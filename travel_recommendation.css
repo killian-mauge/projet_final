@@ -38,7 +38,7 @@ nav {
     margin-bottom: 20px;
   }
   
-  div {
+  section {
     margin-bottom: 10px;
   }
   
@@ -47,7 +47,7 @@ nav {
     width: 100px;
   }
 
-.hero {
+#homeSection {
   height: 90vh;
   background-image: url("site.jpg");
   background-size: cover;
