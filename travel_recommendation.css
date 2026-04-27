@@ -76,3 +76,36 @@ button {
 #btnBook {
   align-self: flex-start;
 }
+
+#resultsSection {
+  display: none;
+  padding: 30px;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+.result-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.result-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.result-card p {
+  font-size: 14px;
+  color: #555;
+}
