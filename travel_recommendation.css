@@ -84,10 +84,12 @@ button {
 
 #result {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .result-card {
-  width: 300px;
   background: white;
   border-radius: 10px;
   padding: 15px;
@@ -96,6 +98,8 @@ button {
 
 .result-card img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }

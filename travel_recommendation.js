@@ -12,6 +12,28 @@ function searchCondition() {
   fetch('travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
+      if (input === "beach" || input =="beaches") {
+        displayResults(data.beaches,resultDiv);
+        homeSection.style.display = "none";
+        resultsSection.style.display = "block";
+        return;
+      }
+
+      if (input === "temple" || input === "temples") {
+        displayResults(data.temples,resultDiv);
+
+        homeSection.style.display = "none";
+        resultsSection.style.display = "block";
+        return;
+        } 
+        
+      if(input == "county" || input == "countries" ){
+        displayResults(data.contries,resultDiv);
+        homeSection.style.display = "none";
+        resultsSection.style.display = "block";
+        return;
+      }      
+    
       let cityFound = null;
 
       data.countries.forEach(country => {
@@ -46,3 +68,14 @@ function searchCondition() {
 }
 
 btnSearch.addEventListener('click', searchCondition);
+
+
+function displayResults(items, resultDiv) {
+    resultDiv.innerHTML = items.map(item => `
+      <div class="result-card">
+        <h3>${item.name}</h3>
+        <img src="${item.imageUrl}" alt="${item.name}">
+        <p>${item.description}</p>
+      </div>
+    `).join("");
+  }
