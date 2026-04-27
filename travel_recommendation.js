@@ -83,3 +83,12 @@ function displayResults(items, resultDiv) {
       </div>
     `).join("");
   }
+
+function clearResults(){
+    document.getElementById('conditionInput').value = "";
+    document.getElementById('result').innerHTML = ""
+    document.getElementById('homeSection').style.display = "block";
+    document.getElementById('resultsSection').style.display = "none";
+}
+
+btnClear.addEventListener('click',clearResults);
