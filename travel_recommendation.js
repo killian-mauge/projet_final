@@ -26,9 +26,13 @@ function searchCondition() {
         resultsSection.style.display = "block";
         return;
         } 
-        
-      if(input == "county" || input == "countries" ){
-        displayResults(data.contries,resultDiv);
+
+      if(input == "country" || input == "countries" ){
+        let allCities = [];
+        data.countries.forEach(country => {
+            allCities = allCities.concat(country.cities);
+        })
+        displayResults(allCities,resultDiv);
         homeSection.style.display = "none";
         resultsSection.style.display = "block";
         return;
